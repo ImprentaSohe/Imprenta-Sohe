@@ -1,0 +1,248 @@
+﻿
+/* Diseño responsivo para celulares */
+@media (max-width: 768px) {
+body {
+max-width: 100%;
+overflow-x: hidden; /* Agregar overflow-x: hidden */
+}
+
+.menu {
+position: fixed;
+top: 0;
+left: 0;
+width: 50%; /* Ancho relativo del menú */
+height: 100vh;
+flex-direction: column;
+background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(128, 128, 128, 0.9));
+transform: translateX(-100%);
+transition: transform 0.6s ease-in-out;
+z-index: 1;
+display: none;
+}
+
+#menu-toggle:checked + .menu-icon + .menu {
+transform: translateX(0);
+display: flex;
+animation: slide-in 0.6s ease-in-out;
+opacity: 0;
+animation-fill-mode: forwards;
+}
+
+@keyframes slide-in {
+0% {
+transform: translateX(-100%);
+opacity: 0;
+}
+
+100% {
+transform: translateX(0);
+opacity: 1;
+}
+}
+
+nav {
+background-color: White;
+color: Gray;
+}
+
+nav:hover {
+color: orangered;
+}
+
+nav ul {
+flex-direction: column;
+width: 100%;
+text-align: left;
+padding: 8px;
+padding-top: 80px;
+}
+
+nav ul li {
+margin: 10%;
+}
+
+nav ul li a {
+font-size: 20px;
+color: gray;
+width: 100%;
+padding: 10px;
+}
+
+nav ul li a:hover {
+color: orangered;
+}
+
+nav ul li ul {
+display: none;
+position: absolute;
+z-index: 1;
+width: 100%;
+padding: 10px;
+}
+
+nav ul li:hover ul {
+display: block;
+}
+
+nav ul li ul li {
+margin-left: 0;
+}
+
+nav ul li ul li a {
+font-size: 20px;
+line-height: 25px;
+color: gray;
+width: 100%;
+background-color: none;
+padding: 0px;
+}
+
+.arrow-down {
+display: inline-block;
+width: 0;
+height: 0;
+margin-left: 5px;
+border-left: 5px solid transparent;
+border-right: 5px solid transparent;
+border-top: 5px solid gray;
+transition: transform 0.3s ease;
+color: gray;
+}
+
+nav ul li ul li a:hover {
+color: orangered;
+}
+
+.menu-icon {
+display: block;
+}
+
+
+#menu-toggle:checked + .menu-icon + .menu .menu-logo {
+display: block; /* Mostrar logo cuando el menú está abierto */
+}
+
+.tooltip-content {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 80%;
+max-width: 100%; /* Cambiar width por max-width */
+box-sizing: border-box; /* Añadir box-sizing */
+padding: 10px; /* Ajustar padding */
+border: 3px solid ORANGERED; /* Ajustar borde */
+background-color: white;
+color: #23631f;
+font-family: 'Futura Md BT';
+}
+
+.container,
+.container2,
+.section4,
+.section5,
+.container3 {
+flex-direction: column;
+align-items: center;
+}
+
+
+.containerprese {
+height: 200px;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: flex-end;
+margin-top: 100px;
+}
+
+.text {
+font-size: medium; /* Reduce el tamaño de la fuente */
+bottom: 70%; /* Ajusta la posición vertical con un espacio de 20px */
+right: 10px; /* Ajusta la posición horizontal con un espacio de 20px */
+color: white;
+}
+
+h1 {
+font-size: x-large; /* Reduce el tamaño de la fuente del título */
+margin: 10px 0px; /* Reduce el margen del título */
+padding-top: 140px;
+}
+p {
+font-size: medium; /* Reduce el tamaño de la fuente del párrafo */
+line-height: 30px; /* Reduce la altura de la línea del párrafo */
+width: 80%; /* Reduce el ancho del párrafo para que se vea bien en pantallas pequeñas */
+}
+
+
+.container,
+.container2 {
+width: 100%;
+}
+
+.image {
+width: calc(50% - 20px); /* Utilizar unidades relativas */
+padding: 5%;
+}
+
+.image5 {
+width: 100%;
+flex-direction: column;
+align-items: center;
+}
+
+.image500{
+padding-top: 102px;
+}
+
+.image5:hover {
+transform: none;
+}
+
+.section10 > p {
+text-align: center;
+font-size: 20px;
+width: 100%;
+}
+
+
+.section4 {
+text-align: center;
+}
+
+.section4:hover,
+.section5:hover,
+.section1:hover {
+background-color: none;
+transform: none;
+}
+
+.card {
+background-color: white;
+border-radius: 30px;
+box-shadow: 0 4px 8px #9b9b9b;
+padding: 0px;
+text-align: center;
+width: 70%;
+height: auto;
+transition: transform 0.3s ease-in-out; /* Agregamos la transición */
+}
+
+
+.card:hover {
+transform: none; /* Levantamos la carta 15px hacia arriba */
+}
+
+.section10:hover {
+background-color: none;
+transform: none;
+}
+
+.ico3 {
+width: 13%;
+}
+
+.ico {
+width: 30%;
+}
+}

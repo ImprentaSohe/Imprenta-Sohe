@@ -1,0 +1,326 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imprenta Sohe</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="telefonos.css">
+    <link rel="icon" href="../FAVICON\logo sohe.png" type="image/png">
+</head>
+<body>
+    <nav>
+        <a href="index.html">
+            <img src="../IMAGENES\logo.png" alt="Logo de SOHE" class="logo">
+        </a>
+        <input type="checkbox" id="menu-toggle" style="display: none;">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul class="menu">
+            <span class="menu-icon-close"></span>
+            <li><a href="index.html"> Inicio </a></li>
+            <li><a href="servicios.html"> Servicios </a></li>
+            <li><a href="#nosotros"> Nosotros </a></li>
+            <li><a href="#contacto"> Contacto </a></li>
+            <li>
+                <a href="https://www.google.com/maps/place/SOHE/@15.3165677,-87.9928874,17z/data=!3m1!4b1!4m6!3m5!1s0x8f6669c25f43dd73:0xe820e62a62430d7e!8m2!3d15.3165625!4d-87.9903125!16s%2Fg%2F11vxpl3m5q?entry=ttu"
+                   target="blank"> Ir a Ubicación </a>
+            </li>
+        </ul>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const menuToggle = document.getElementById('menu-toggle');
+                const menu = document.querySelector('.menu');
+
+                document.addEventListener('click', function (event) {
+                    if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+                        menuToggle.checked = false;
+                    }
+                });
+            });
+
+        </script>
+    </nav>
+    <div class="containerprese">
+        <h1 class="titulo">
+            SERIGRAFIA | FULL PRINT | BORDADO | GRABADO LASER
+            <p class="parrafo">TRABAJAMOS PARA DARTE LO MEJOR EN ARTICULOS PROMOCIONALES</p>
+        </h1>
+        <a href="https://es.wikipedia.org/wiki/Honduras" target="blank">
+            <img src="../IMAGENES/bandera.png" alt="Descripción de la imagen" class="imagen-al-lado">
+        </a>
+    </div>
+    <center>
+        <div class="nosotros" id="nosotros"></div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="container3r animate">
+            <div class="text-container active">
+                <h1>QUIÉNES SOMOS</h1>
+                <br />
+                <p>
+                    Somos una Empresa con una trayectoria de más de 15 años,
+                    orientados a la venta de artículos promocionales personalizados,
+                    dedicados hacia todos nuestros clientes, siempre tratando de
+                    brindar el mejor servicio y calidad posible.
+                </p>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="container444 animate">
+            <div class="section active " id="mision">
+                <h2>MISIÓN</h2>
+                <br />
+                <p>
+                    Dar servicio con calidad y eficiencia, brindando comodidad<br />
+                    y seguridad a nuestros clientes acorde a sus necesidades.
+                </p>
+                <div class="point-container">
+                    <div class="point filled"></div>
+                    <div class="point empty"></div>
+                </div>
+                <span class="arrow arrow-left" onclick="showSection('vision')">&larr;</span>
+                <span class="arrow arrow-right" onclick="showSection('vision')">&rarr;</span>
+            </div>
+
+            <div class="section" id="vision">
+                <h2>VISIÓN</h2>
+                <br />
+                <p>
+                    Ser lideres a nivel nacional en nuestros articulos promocionales<br />
+                    con excelencia, calidad, innovación y sostenibilidad.
+                </p>
+                <div class="point-container">
+                    <div class="point empty"></div>
+                    <div class="point filled"></div>
+                </div>
+                <span class="arrow arrow-left" onclick="showSection('mision')">&larr;</span>
+                <span class="arrow arrow-right" onclick="showSection('mision')">&rarr;</span>
+            </div>
+        </div>
+        <script>
+            function showSection(sectionId) {
+                // Ocultar la sección actual
+                document.querySelector('.section.active').classList.remove('active');
+
+                // Mostrar la sección seleccionada
+                document.getElementById(sectionId).classList.add('active');
+
+                // Cambiar el estado de los puntos
+                var points = document.querySelectorAll('.point');
+                points.forEach(function (point) {
+                    point.classList.toggle('filled');
+                    point.classList.toggle('empty');
+                });
+            }
+        </script>
+        <script>
+            function showSection(sectionId) {
+                var sections = document.querySelectorAll('.section');
+                sections.forEach(function (section) {
+                    section.style.display = 'none';
+                });
+                document.getElementById(sectionId).style.display = 'block';
+            }
+        </script>
+    </center>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <center>
+        <div class="principios">
+            <h2>NUESTROS VALORES</h2>
+            <br />
+        </div>
+        <center>
+            <div class="containerone">
+                <div class="section1 transparencia">
+                    <img src="..\IMAGENES\transparencia.png" alt="Calidad image">
+                    <h2>Transparencia</h2>
+                </div>
+                <div class="section1 respeto">
+                    <img src="..\IMAGENES\respeto.png" alt="Confianza image">
+                    <h2>Respeto</h2>
+                </div>
+                <div class="section1 responsabilidad">
+                    <img src="..\IMAGENES\responsabilidad.png" alt="Innovación image">
+                    <h2>Responsabilidad</h2>
+                </div>
+                <div class="section1 honestidad">
+                    <img src="..\IMAGENES\honestidad.png" alt="Innovación image">
+                    <h2>Honestidad</h2>
+                </div>
+            </div>
+        </center>
+    </center>
+    <center>
+        <div class="principios">
+            <br />
+            <br />
+            <h2>NUESTRAS BASES</h2>
+        </div>
+        <center>
+            <div class="containerone1">
+                <div class="section1one calidad">
+                    <img src="..\IMAGENES\calidad.png" alt="Calidad image">
+                    <h2>Calidad</h2>
+                    <p>
+                        Nos esforzamos por ofrecer productos y servicios de la
+                        más alta calidad en la industria.
+                    </p>
+                </div>
+                <div class="section1one confianza">
+                    <img src="..\IMAGENES\confianza.png" alt="Confianza image">
+                    <h2>Confianza</h2>
+                    <p>
+                        Nos comprometemos a ser transparentes en todo lo que hacemos,
+                        para que siempre esté informado sobre el progreso de su proyecto.
+                    </p>
+                </div>
+                <div class="section1one innovacion">
+                    <img src="..\IMAGENES\innovacion.png" alt="Innovación image">
+                    <h2>Innovación</h2>
+                    <p>
+                        Siempre tratando de innovar y mejorar continuamente para ofrecer
+                        soluciones innovadoras y de alta calidad.
+                    </p>
+                </div>
+            </div>
+        </center>
+    </center>
+    <div class="principios">
+        <h2>SERVICIOS PRINCIPALES</h2>
+        <br />
+    </div>
+    <center>
+        <div class="container2">
+            <div class="image-container">
+                <img src="../IMAGENES/pulpo.png" alt="pulpo" class="image5">
+                <img src="../IMAGENES/icoserigrafia.png" alt="nueva-imagen" class="image6 top-image">
+            </div>
+            <div class="image-container">
+                <img src="../IMAGENES\ploter.png" alt="ploter" class="image5" />
+                <img src="..\IMAGENES\icofullprint.png" alt="nueva-imagen" class="image6 top-image">
+            </div>
+            <div class="image-container">
+                <img src="../IMAGENES\bordadora.png" alt="bordadora" class="image5">
+                <img src="..\IMAGENES\icobordado.png" alt="nueva-imagen" class="image6 top-image">
+            </div>
+            <div class="image-container">
+                <img src="../IMAGENES\laser.png" alt="laser" class="image5">
+                <img src="..\IMAGENES\icolaser.png" alt="nueva-imagen" class="image6 top-image">
+            </div>
+        </div>
+    </center>
+    <div class="principios">
+        <br />
+        <br />
+        <h2>PROMOCIONALES MAS COTIZADOS</h2>
+        <br />
+    </div>
+    <div class="inline-containeer">
+        <div class="containeer">
+            <div class="texto">CAMISETAS BASICAS</div>
+            <div class="imageee" style="background-image: url('../IMAGENES/camisas.png');" alt="bordadora"></div>
+        </div>
+        <div class="containeer">
+            <div class="texto1">TIPO POLO</div>
+            <div class="imageee" style="background-image: url('../IMAGENES/polos.png');" alt="bordadora"></div>
+        </div>
+        <div class="containeer">
+            <div class="texto">FULL COLOR</div>
+            <div class="imageee" style="background-image: url('../IMAGENES/full print.png');" alt="bordadora"></div>
+        </div>
+        <div class="containeer">
+            <div class="texto1">GORRAS</div>
+            <div class="imageee" style="background-image: url('../IMAGENES/gorras.png');" alt="bordadora"></div>
+        </div>
+    </div>
+        <center>
+            <div class="CONTACTOS" id="contacto"></div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <div class="contacto">
+                <h5>COTIZA CON NOSOTROS</h5>
+                <a href="whatsapp://send?phone=+504 9759-4699" target="blank">
+                    <button id="botoncontacto">¡ESCRIBENOS!</button>
+                </a>
+            </div>
+        </center>
+        <center>
+            <div>
+                <br />
+                <br />
+            </div>
+            <div class="container3">
+                <img src="../IMAGENES/sohe 1.png" alt="logo" class="image">
+                <div class="section10">
+                    <a href="../ARCHIVOS\Catalogo SOHE.pdf" target="blank">
+                        <button id="myButton">VER CATALOGO</button>
+                    </a>
+                    <br />
+                    <br />
+                    <h2>Contacto</h2>
+                    <br />
+                    <p>
+                        <a href="https://www.facebook.com/profile.php?id=61559582416340&mibextid=LQQJ4d" target="..blank">
+                            <img src="../IMAGENES\facebook.svg" class="ico3" />
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="sectionten">
+                ©2024 <strong>Imprenta Sohe</strong>, Todos los derechos reservados
+            </div>
+        </center>
+        <script>
+            const anchorLinks = document.querySelectorAll('a[href*="#"]');
+
+            anchorLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const hash = link.getAttribute('href');
+                    const targetElement = document.querySelector(hash);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        </script>
+        <script>
+            let lastScrollTop = 0;
+            let animateElements = document.querySelectorAll('.animate');
+
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop) {
+                    animateElements.forEach((element) => {
+                        if (isInViewport(element)) {
+                            element.classList.add('active');
+                        }
+                    });
+                }
+                lastScrollTop = scrollTop;
+            });
+
+            function isInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                return (
+                    rect.top <= window.innerHeight &&
+                    rect.bottom >= 0
+                );
+            }
+        </script>
+</body>
+</html>

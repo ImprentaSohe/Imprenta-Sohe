@@ -1,0 +1,467 @@
+﻿/* Establece el margen y el relleno de todos los elementos en la página */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box; /* Asegura que el relleno y el borde se incluyan en el tamaño total */
+}
+
+/* Estilos del cuerpo de la página */
+body {
+line-height: 1.6;
+background-color: none;
+scroll-behavior: smooth;
+}
+
+/* Estilos de la barra de navegación */
+nav {
+background-color: White;
+color: white;
+padding: 30px 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: fixed;
+width: 100%;
+top: 0;
+z-index: 1000;
+font-family: 'Futura Md BT';
+font-size: large;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.menu-icon {
+display: none;
+font-size: 24px;
+cursor: pointer;
+}
+
+nav ul {
+list-style: none;
+display: flex;
+margin: 0;
+padding: 0;
+}
+
+nav ul li {
+margin-left: 20px;
+position: relative; /* agregar posición relativa */
+}
+
+nav ul li a {
+font-size: 16px;
+color: black;
+text-decoration: none;
+padding: 5px 10px;
+}
+
+nav ul li a::after {
+content: "";
+position: absolute;
+bottom: 0;
+right: 0;
+width: 0;
+height: 2px; /* grosor de la línea */
+background-color: #23631f;
+transition: width 0.5s ease-out;
+}
+
+nav ul li a:hover {
+color: Orangered;
+text-decoration: none; /* quitar la línea de subrayado por defecto */
+}
+
+nav ul li a:hover::after {
+width: 100%;
+transition: width 0.5s ease-out;
+}
+
+nav ul li ul {
+display: none;
+position: absolute;
+background-color: White;
+z-index: 1;
+width: 100%;
+padding: 10px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li:hover ul {
+display: block;
+}
+
+nav ul li ul li {
+margin-left: 0;
+}
+
+nav ul li ul li a {
+font-size: 16px;
+color: black;
+text-decoration: none;
+padding: 10px;
+display: block;
+width: 100%;
+}
+
+nav ul li ul li a:hover {
+color: Orangered;
+}
+
+.logo {
+width: 130px; /* Ajusta el tamaño de la imagen */
+height: auto;
+float: left; /* Coloca la imagen a la izquierda */
+margin-right: 10px; /* Agrega un margen derecho para separar la imagen del botón de menú */
+}
+
+.arrow-down {
+display: inline-block;
+width: 0;
+height: 0;
+margin-left: 5px;
+border-left: 5px solid transparent;
+border-right: 5px solid transparent;
+border-top: 5px solid black;
+transition: transform 0.3s ease;
+color: black;
+}
+
+.menu li:hover .arrow-down {
+transform: rotate(180deg);
+}
+
+
+.containerprese {
+width: 98%;
+height: 95vh;
+margin: 0 auto; /* Centra el contenedor horizontalmente */
+display: flex;
+justify-content: center;
+align-items: center;
+animation: changeBackground 12s infinite;
+border-radius: 10px;
+background-image: url('imagen.jpg');
+background-size: cover;
+background-position: center;
+}
+
+
+.text {
+font-family: 'Futura Md BT';
+font-size: xx-large;
+color: white;
+animation: textEffect 40s infinite;
+position: absolute;
+bottom: 100px; /* Ajusta la posición vertical con un espacio de 20px */
+right: 40px; /* Ajusta la posición horizontal con un espacio de 20px */
+line-height: 1.3;
+text-align: justify-all;
+animation: subir 1.5s; /* Agrego la animación */
+}
+
+@keyframes subir {
+0% {
+transform: translateY(100px); /* Inicio de la animación */
+opacity: 0;
+}
+
+100% {
+transform: translateY(0); /* Fin de la animación */
+opacity: 1;
+}
+}
+
+
+@keyframes changeBackground {
+0% {
+background-image: url(../IMAGENES/fondo7.png);
+
+}
+
+20% {
+background-image: url(../IMAGENES/fondo1.png);
+
+}
+
+40% {
+background-image: url(../IMAGENES/fondo3.png);
+
+}
+
+60% {
+background-image: url(../IMAGENES/fondo4.png);
+
+}
+
+80% {
+background-image: url(../IMAGENES/fondo5.png);
+
+}
+
+100% {
+background-image: url(../IMAGENES/fondo6.png);
+
+}
+}
+
+/* Estilos del contenedor donde están los principios */
+.container {
+background-color: black;
+position: relative;
+display: flex;
+justify-content: center;
+width: 95%;
+border-radius: 40px;
+margin: 20px auto; /* Centrar el contenedor horizontalmente */
+}
+
+.section1 {
+font-family: 'Futura Md BT';
+color: white;
+padding: 70px;
+border-radius: 40px;
+text-align: left;
+width: 94%;
+}
+
+.section1 > p {
+font-family: 'Futura Bk BT';
+color: white;
+}
+
+.section1:hover {
+background-color: orangered;
+transform: scale(1.1);
+}
+
+/* Estilos del texto antes del contenedor principios quienes somos, servicios y productos */
+
+.tooltip-content {
+position: fixed; /* changed from absolute to fixed */
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: white;
+border: 3px solid ORANGERED;
+padding: 20px;
+border-radius: 20px;
+display: none;
+color: #23631f;
+font-family: 'Futura Md BT';
+z-index: 1000;
+font-size: 24px;
+box-shadow: 0 4px 8px #9b9b9b;
+}
+
+.tooltip-content > p {
+color: black;
+font-family: 'Futura Bk BT';
+font-size: 16px;
+}
+
+.close-tooltip {
+position: absolute;
+top: 10px;
+right: 10px;
+color: orangered;
+cursor: pointer;
+}
+
+.close-tooltip:hover {
+color: red;
+}
+
+.overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black overlay */
+display: none;
+transition: background-color 0.5s ease; /* transición suave */
+}
+
+.tooltip-content.open ~ .overlay {
+display: block;
+background-color: rgba(0, 0, 0, 0.8); /* más opaco al abrir la ventana */
+transition: background-color 0.5s ease; /* transición suave */
+}
+
+.tooltip-content:not(.open) ~ .overlay {
+background-color: rgba(0, 0, 0, 0.5); /* regresa a la opacidad original */
+transition: background-color 0.5s ease; /* transición suave */
+}
+
+/* Principios styles */
+.principios {
+font-family: 'Futura Md BT';
+color: #23631f;
+text-align: center;
+font-size: x-large;
+margin: 20px 0;
+}
+
+.principios > h2 {
+position: relative; /* agregar posición relativa */
+display: inline-block; /* agregar display inline-block para que la línea solo cubra la palabra */
+}
+
+.principios > h2:hover {
+color: orangered;
+text-decoration: none; /* quitar la línea de subrayado por defecto */
+cursor: pointer;
+}
+
+.principios > h2::after {
+content: "";
+position: absolute;
+bottom: 0;
+right: 0; /* cambiar left por right para que empiece desde la derecha */
+width: 0;
+height: 3px; /* grosor de la línea */
+background-color: #23631f;
+transition: width 0.5s ease-out;
+}
+
+.principios > h2:hover::after {
+width: 100%;
+left: auto; /* agregar left auto para que la línea solo cubra la palabra */
+right: 0;
+transition: width 0.5s ease-out;
+}
+/* Estilos del contenedor quienes somos */
+.section4 {
+font-family: 'Futura Md BT';
+color: white;
+padding: 70px;
+border-radius: 40px;
+text-align: center;
+width: 94%;
+margin: 10px auto;
+}
+
+.section4 > p {
+font-family: 'Futura Bk BT';
+color: white;
+}
+
+.section4:hover {
+background-color: orangered;
+transform: scale(1.1);
+}
+
+/* Estilos del contenedor nuestros servicios y promocionales más cotizados */
+.container2 {
+display: flex;
+justify-content: space-around;
+gap: 20px;
+margin: 20px;
+}
+
+.card {
+background-color: white;
+border-radius: 10px;
+box-shadow: 0 4px 8px #9b9b9b;
+padding: 0px;
+text-align: center;
+width: 25%;
+height: auto;
+transition: transform 0.3s ease-in-out; /* Agregamos la transición */
+}
+/* Agregamos una clase para los elementos que queremos animar */
+.animate {
+opacity: 0;
+transform: translateY(-4%);
+transition: opacity 1s, transform 2s;
+}
+
+.animate.active {
+opacity: 1;
+transform: translateY(0);
+}
+
+.card:hover {
+transform: translateY(-15px); /* Levantamos la carta 15px hacia arriba */
+}
+
+.image5 {
+width: 100%;
+height: auto;
+}
+
+.section5 {
+font-family: 'Futura Md BT';
+color: black;
+padding: 10px;
+border-radius: 40px;
+text-align: center;
+width: 100%;
+transition: transform 0.3s ease-in-out; /* Agregamos la transición */
+}
+
+.section5:hover {
+color: orangered;
+transform: translateY(-2px); /* Levantamos el contenido 2px hacia arriba */
+}
+
+/* Estilos  del contenedor del final de la pagina*/
+
+.container3 {
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: black;
+color: white;
+padding: 1rem 0;
+margin-bottom: 4rem; /* Agregué este margen inferior */
+}
+
+.section10 {
+text-align: center;
+font-family: 'Futura Md BT';
+font-size: medium;
+color: white;
+}
+
+.section10 p {
+margin: 0;
+font-size: 1rem;
+font-family: 'Futura Md BT';
+font-size: large;
+color: white;
+}
+
+.section10 strong {
+font-weight: bold;
+}
+
+.image {
+position: center;
+width: 25%;
+height: 15%;
+padding: 5%;
+}
+
+.ico {
+position: center;
+width: 15%;
+padding: 0%;
+}
+
+.ico:hover {
+transform: scale(1.1);
+}
+
+/* Estilos  de los iconos de redes*/
+
+.ico3 {
+position: center;
+width: 6%;
+padding: 1%;
+}
+
+.ico3:hover {
+transform: scale(1.1);
+}
+

@@ -1,0 +1,1020 @@
+﻿/* Establece el margen y el relleno de todos los elementos en la página */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box; /* Asegura que el relleno y el borde se incluyan en el tamaño total */
+}
+
+/* Estilos del cuerpo de la página */
+body {
+line-height: 1.6;
+scroll-behavior: smooth;
+}
+
+/* Estilos de la barra de navegación */
+nav {
+background-color: White;
+color: white;
+padding: 30px 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: fixed;
+width: 100%;
+top: 0;
+z-index: 1000;
+font-family: 'Futura Md BT';
+font-size: large;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.menu-icon {
+display: none;
+font-size: 24px;
+cursor: pointer;
+}
+
+nav ul {
+list-style: none;
+display: flex;
+margin: 0;
+padding: 0;
+}
+
+nav ul li {
+margin-left: 20px;
+}
+
+nav ul li a {
+font-size: 16px;
+color: black;
+text-decoration: none;
+padding: 5px 10px;
+position: relative; /* agregar posición relativa */
+}
+
+nav ul li a::after {
+content: "";
+position: absolute;
+bottom: 0;
+right: 0;
+width: 0;
+height: 2px; /* grosor de la línea */
+background-color: #23631f;
+transition: width 0.5s ease-out;
+}
+
+nav ul li a:hover {
+color: Orangered;
+text-decoration: none; /* quitar la línea de subrayado por defecto */
+}
+
+nav ul li a:hover::after {
+width: 100%;
+transition: width 0.5s ease-out;
+}
+
+.logo {
+width: 130px; /* Ajusta el tamaño de la imagen */
+height: auto;
+float: left; /* Coloca la imagen a la izquierda */
+margin-right: 10px; /* Agrega un margen derecho para separar la imagen del botón de menú */
+}
+
+/*estilos de fotos despues de nav*/
+.containerprese {
+    width: 100%;
+    height: 95vh;
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Necesario para que el posicionamiento absoluto funcione correctamente */
+    animation: changeBackground 12s infinite;
+}
+
+    .containerprese img {
+        object-fit: cover;
+        width: 100px; /* Ajusta el tamaño de la imagen según sea necesario */
+        height: auto; /* Mantiene la proporción de la imagen */
+        position: absolute; /* Permite que la imagen se posicione de manera independiente */
+        bottom: 20px; /* Ajusta la distancia desde la parte inferior */
+        right: 20px; /* Ajusta la distancia desde la derecha */
+        animation: wave 2s infinite; /* Aplica la animación de onda */
+    }
+
+@keyframes wave {
+    0% {
+        transform: translateY(0); /* Posición inicial */
+    }
+
+    25% {
+        transform: translateY(-5px); /* Mueve hacia arriba */
+    }
+
+    50% {
+        transform: translateY(0); /* Regresa a la posición inicial */
+    }
+
+    75% {
+        transform: translateY(5px); /* Mueve hacia abajo */
+    }
+
+    100% {
+        transform: translateY(0); /* Regresa a la posición inicial */
+    }
+}
+
+.titulo {
+    font-size: xx-large;
+    font-family: 'Futura Md BT';
+    color: white;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto; /* Agrego un margen automático para centrar el título */
+    padding-top: 60px;
+    animation: subir 1.5s; /* Agrego la animación */
+}
+
+.parrafo {
+    padding-top: 20px; /* Ajusta el padding para que esté más cerca del título */
+    font-size: xx-large;
+    font-family: 'Futura bk BT';
+    color: white;
+    text-align: center;
+    width: 100%; /* Agrego un ancho del 80% */
+    margin: 0 auto; /* Agrego un margen automático para centrar el párrafo */
+    letter-spacing: 3px; /* Agrego un espacio de 3 píxeles entre las letras */
+    animation: subir 1.5s; /* Agrego la animación */
+}
+@keyframes subir {
+0% {
+transform: translateY(100px); /* Inicio de la animación */
+opacity: 0;
+}
+
+100% {
+transform: translateY(0); /* Fin de la animación */
+opacity: 1;
+}
+}
+
+
+@keyframes changeBackground {
+0% {
+background-image: url(../IMAGENES/fondo1.png);
+}
+
+20% {
+background-image: url(../IMAGENES/fondo2.png);
+}
+
+40% {
+background-image: url(../IMAGENES/fondo3.png);
+}
+
+60% {
+background-image: url(../IMAGENES/fondo4.png);
+}
+
+80% {
+background-image: url(../IMAGENES/fondo5.png);
+}
+
+100% {
+background-image: url(../IMAGENES/fondo6.png);
+}
+}
+
+/*fin*/
+
+/*estilos del contenedor de donde estan la mision y vision*/
+
+.container444 {
+background-color: none;
+position: relative;
+display: flex;
+justify-content: center;
+width: 55%;
+border-radius: 40px;
+}
+
+
+.container444 img {
+background-color: none;
+position: relative;
+display: flex;
+justify-content: center;
+width: 30%;
+height: auto;
+border-radius: 40px;
+margin-left: 40px;
+}
+
+
+.section444 {
+font-family: 'Futura Md BT';
+font-size: xx-large;
+color: #23631f;
+padding: 40px;
+border-radius: 40px;
+text-align: center;
+width: 95%;
+}
+
+.section444 > p {
+font-family: 'Futura Bk BT';
+font-size: 16px;
+color: black;
+text-align: justify;
+}
+
+.arrow {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+font-size: 3rem;
+color: orangered;
+cursor: pointer;
+}
+
+.arrow-left {
+left: 13%;
+}
+
+.arrow-right {
+right: 13%;
+}
+
+.section {
+display: none;
+font-family: 'Futura Md BT';
+font-size: x-large;
+color: #23631f;
+width: 100%; /* Establece el ancho del texto en 80% del contenedor */
+}
+
+.section > p  {
+font-family: 'Futura Bk BT';
+font-size: 16px;
+color: black;
+text-align: center;
+line-height: 40px;
+}
+
+.section.active {
+display: block;
+font-family: 'Futura Md BT';
+font-size: x-large;
+color: #23631f;
+}
+
+.section.active > p {
+display: block;
+font-family: 'Futura Bk BT';
+font-size: 16px;
+color: black;
+text-align: center;
+line-height: 40px;
+}
+
+.point {
+width: 8px;
+height: 8px;
+border-radius: 50%;
+display: inline-block;
+margin: 0 5px;
+}
+
+.point.filled {
+background-color: orangered;
+}
+
+.point.empty {
+background-color: none;
+border: 1px solid orangered;
+}
+
+.point-container {
+text-align: center;
+margin-top: 20px;
+}
+
+/*fin*/
+
+/*estilos de los promocionales mas cotizados*/
+
+.carousel-container {
+width: 80%;
+margin: 0 auto;
+position: relative; /* For positioning controls */
+}
+
+.carousel-slide {
+width: 70%;
+height: 70%; /* Adjust height as needed */
+overflow: hidden;
+position: relative; /* For positioning thumbnails */
+}
+
+.carousel-slide img {
+width: 90%; /* Image takes up full width */
+height: auto;
+display: block; /* Prevents extra space */
+animation: fade-in 1s; /* Agrega la animación */
+}
+
+@keyframes fade-in {
+0% {
+opacity: 0;
+}
+
+100% {
+opacity: 1;
+}
+}
+
+/* Thumbnails */
+.carousel-thumbnails {
+position: absolute;
+bottom: -35px;
+left: 60px;
+display: flex;
+z-index: 900; /* Establece un z-index más bajo para que esté debajo del overlay */
+}
+
+.carousel-thumbnail {
+width: 111px;
+height: 111px;
+margin-right: 10px;
+overflow: hidden;
+cursor: pointer;
+}
+
+.carousel-thumbnail img {
+width: 100%;
+height: auto;
+}
+
+/* Controls (Arrows) */
+.carousel-controls {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+width: 100%;
+display: flex;
+justify-content: space-between;
+}
+
+.carousel-controls button {
+background-color: transparent;
+padding: 60px;
+border: none;
+cursor: pointer;
+color: orangered;
+text-align: center;
+font-size: xx-large;
+transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+
+/* Animación de rebote (arriba y abajo) */
+@keyframes bounce {
+0%, 100% {
+transform: translateY(0); /* Posición inicial */
+}
+
+50% {
+transform: translateY(-15px); /* Se mueve hacia arriba */
+}
+}
+
+/*estilos promocionales mas cotizados*/
+
+/* Contenedor en línea */
+.inline-containeer {
+    display: flex;
+    justify-content: space-between; /* Distribuye los cuadros en el ancho completo */
+    width: 100%;
+}
+
+/* Contenedor de cada cuadro */
+.containeer {
+    flex: 1; /* Permite que cada cuadro se ajuste proporcionalmente */
+    height: 340px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Texto inicial */
+.texto {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Futura Md BT';
+    font-size: x-large;
+    font-weight: bold; /* Texto en negrita */
+    background-color: orangered;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.2s ease;
+}
+
+/* Texto inicial */
+.texto1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Futura Md BT';
+    font-size: x-large;
+    font-weight: bold; /* Texto en negrita */
+    background-color: #23631f;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.2s ease;
+}
+
+/* Imagen oculta */
+.imageee {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+/* Efecto al pasar el cursor */
+.containeer:hover .texto {
+    opacity: 0;
+}
+
+.containeer:hover .imageee {
+    opacity: 1;
+}
+
+
+/*boton para informacion*/
+
+.btn-carousel,
+.btn1-carousel {
+position: absolute;
+top: 30px;
+right: 70px;
+background-color: white;
+color: black;
+border: none;
+padding: 10px 20px;
+border-radius: 20px;
+font-family: 'Futura Md BT';
+font-size: large;
+cursor: pointer;
+animation: aparecer 0.5s ease-in-out;
+transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+@keyframes aparecer {
+0% {
+opacity: 0;
+transform: scale(0.5);
+}
+100% {
+opacity: 1;
+transform: scale(1);
+}
+}
+
+.btn-carousel:hover {
+background-color: #23631f;
+color: white;
+}
+
+.btn1-carousel:hover {
+background-color: orangered;
+color: white;
+}
+
+/* Estilos para la ventana emergente */
+.tooltip-content {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: white;
+border: 3px solid orangered;
+padding: 10px;
+border-radius: 20px;
+display: none;
+color: #23631f;
+font-family: 'Futura Md BT';
+z-index: 1000;
+font-size: 16px;
+box-shadow: 0 4px 8px #9b9b9b;
+width: 50%;
+}
+
+.tooltip-content > p {
+width: 50%;
+font-size: 16px;
+color: black;
+font-family: 'Futura Bk BT';
+}
+
+.close-tooltip {
+position: absolute;
+top: 10px;
+right: 10px;
+color: orangered;
+cursor: pointer;
+}
+
+.close-tooltip:hover {
+color: red;
+}
+
+.overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black overlay */
+display: none;
+transition: background-color 0.5s ease; /* transición suave */
+z-index: 1000; /* Agrega un z-index alto para que esté por encima de las imágenes */
+}
+
+.tooltip-content.open ~ .overlay {
+display: block;
+background-color: rgba(0, 0, 0, 0.8); /* más opaco al abrir la ventana */
+transition: background-color 0.5s ease; /* transición suave */
+z-index: 1000; /* Mantén el z-index alto */
+}
+
+.tooltip-content:not(.open) ~ .overlay {
+background-color: rgba(0, 0, 0, 0.5); /* regresa a la opacidad original */
+transition: background-color 0.5s ease; /* transición suave */
+z-index: 1000; /* Mantén el z-index alto */
+}
+
+.tooltip-content.open {
+display: block;
+z-index: 1001; /* Agrega un z-index aún más alto para que la ventana emergente esté por encima del overlay */
+}
+
+.overlay.open {
+display: block;
+z-index: 1000; /* Mantén el z-index alto */
+}
+
+/*fin*/
+
+/*contenedor contacto*/
+.contacto {
+width: 100%;
+height: 20vh; /* ajusta el valor según sea necesario */
+background-color: black;
+position: relative;
+top: 40px; /* ajusta el valor según sea necesario */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.contacto > h5 {
+color: white;
+text-align: center;
+font-size: 26px;
+font-family: 'Futura Md BT';
+margin-bottom: 10px; /* agrega un margen inferior para separar el texto del botón */
+letter-spacing: 4px;
+}
+
+#botoncontacto {
+font-family: 'Futura BK BT';
+position: relative;
+background-color: lightgrey;
+color: Black;
+padding: 10px 70px; /* ajusta el tamaño del botón */
+border-radius: 5px;
+border: none;
+font-size: 16px;
+font-weight: lighter;
+cursor:pointer;
+}
+#botoncontacto:hover {
+background-color: white;
+color: orangered;
+padding: 10px 70px; /* ajusta el tamaño del botón */
+border-radius: 5px;
+border: none;
+font-size: 16px;
+font-weight: bold;
+}
+
+/* Estilos del contenedor donde están quienes somos */
+
+.container3r {
+    width: 80%;
+    background-size: cover; /* Scale background image to fit within container */
+    background-position: center; /* Se centra la imagen de fondo */
+    color: #fff; /* Se establece el color del texto */
+    border-radius: 0%; /* Sin bordes redondeados */
+    box-sizing: border-box; /* Incluye el padding en el ancho del contenedor */
+    display: flex; /* Utiliza Flexbox para alinear los elementos en una fila */
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: flex-start; /* Alinea los elementos al inicio */
+    padding: 0px; /* Reduce el padding para acercar el texto y la imagen */
+}
+
+h1 {
+/* Se establece un margen para que el texto no se pegue al borde */
+font-family: 'Futura Md BT';
+color: #23631f;
+text-align: center;
+font-size: xx-large;
+line-height: 1.3;
+margin-top: -2%;
+}
+
+p {
+/* Se establece un margen para que el texto no se pegue al borde */
+font-family: 'Futura Bk BT';
+color: black;
+text-align: justify;
+font-size: 16px;
+position: relative;
+line-height: 40px;
+margin: 0 auto; /* Centra el texto horizontalmente */
+width: 45%; /* Keep this to set the width of the text */
+}
+/*fin*/
+
+/*estilos de donde estan valores y bases*/
+.containerone {
+background-color: none;
+position: relative;
+display: flex;
+justify-content: center;
+width: 100%;
+border-radius: 0px;
+margin: 20px auto; /* Centrar el contenedor horizontalmente */
+}
+
+.containerone1 {
+background-color: none;
+position: relative;
+display: flex;
+justify-content: center;
+width: 80%;
+border-radius: 0px;
+margin: 20px auto; /* Centrar el contenedor horizontalmente */
+}
+
+
+/* PILARES */
+.calidad {
+background-color: none; 
+border-radius: 0px;
+}
+
+.confianza {
+background-color: none;
+border-radius: 0px;
+}
+
+.innovacion {
+background-color: none; 
+border-radius: 0px;
+}
+
+/* VALORES */
+.transparencia {
+background-color: #23631f;
+border-radius: 0px;
+}
+
+.respeto {
+background-color: orangered; 
+border-radius: 0px;
+}
+
+.responsabilidad {
+background-color: #23631f; 
+border-radius: 0px;
+}
+
+.honestidad {
+background-color: orangered; 
+border-radius: 0px;
+}
+
+
+.section1 {
+font-family: 'Futura Md BT';
+color: white;
+padding: 70px;
+border-radius: 0px;
+text-align: center;
+width: 94%;
+}
+
+.section1one {
+font-family: 'Futura Md BT';
+color: black;
+padding: 70px;
+border-radius: 0px;
+text-align: center;
+width: 94%;
+}
+
+.section1one > p {
+font-family: 'Futura bk BT';
+color: black;
+padding: 10px;
+border-radius: 0px;
+text-align: justify;
+width: 100%;
+font-size: 16px
+}
+
+.section1 img {
+width: 90px; /* adjust the width of the images */
+height: auto; /* adjust the height of the images */
+margin-bottom: 30px; /* add some space between the image and the heading */
+}
+
+.section1one img {
+width: 90px; /* adjust the width of the images */
+height: auto; /* adjust the height of the images */
+margin-bottom: 30px; /* add some space between the image and the heading */
+}
+
+/* Estilos del texto antes del contenedor principios quienes somos, servicios y productos */
+.principios {
+font-family: 'Futura Md BT';
+color: #23631f;
+text-align: center;
+font-size: x-large;
+margin: 20px 0;
+}
+
+/* Agregamos una clase para los elementos que queremos animar */
+.animate {
+transform: translateY(30%); /* La animación viene desde abajo */
+transition: transform 1.3s; /* Velocidad moderada */
+}
+
+.animate.active {
+transform: translateY(0); /* Se coloca en la posición correcta */
+}
+
+/* Estilos del contenedor quienes somos */
+.section4 {
+font-family: 'Futura Md BT';
+color: black;
+padding: 70px;
+border-radius: 40px;
+text-align: center;
+width: 100%;
+margin: 10px auto;
+position: relative;
+}
+
+.section4 > p {
+font-family: 'Futura Bk BT';
+color: black;
+text-align: justify;
+font-size: large;
+position: relative;
+line-height: 40px;
+}
+
+
+/* Estilos del contenedor nuestros servicios y promocionales más cotizados */
+.container2 {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+width:100%;
+overflow: hidden; /* Agrega esta propiedad al contenedor */
+}
+
+.image-container {
+position: relative;
+width: 25%;
+padding: 0px;
+box-sizing: border-box;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden; /* Agrega esta propiedad al contenedor */
+}
+
+.image5 {
+width: 100%;
+height: auto;
+}
+
+.image5:hover{
+transform-origin: center;
+}
+
+.image6 {
+max-width: 60%;
+height: auto;
+margin: 90px 76px;
+transition: transform 0.6s ease-in-out;
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+margin: auto;
+}
+
+.image6:hover {
+transform: scale(1.4);
+}
+
+.container33 {
+background-color: black;
+position: relative;
+display: flex;
+justify-content: center;
+width: 95%;
+border-radius: 40px;
+margin: 20px auto; /* Centrar el contenedor horizontalmente */
+}
+
+
+.section555 {
+font-family: 'Futura Md BT';
+color: white;
+padding: 30px;
+border-radius: 40px;
+text-align: left;
+width: 94%;
+transition: transform 0.3s ease-in-out;
+}
+
+.section555:hover {
+background-color: orangered;
+transform: scale(1.1);
+}
+
+
+.image555:hover {
+background-color: orangered;
+transform: scale(1.1);
+}
+
+.image555 {
+position: center;
+width: 100%;
+padding: 0%;
+transition: transform 0.3s ease-in-out;
+}
+
+.image5 {
+position: center;
+width: 100%;
+padding: 0%;
+}
+
+.section5 {
+font-family: 'Futura Md BT';
+color: white;
+padding: 0px;
+border-radius: 40px;
+text-align: left;
+width: 10%;
+}
+
+
+/* Estilos  del contenedor del final de la pagina*/
+
+.container3 {
+text-align: right;
+background-color: orangered;
+position: center;
+display: flex;
+width: 100%;
+}
+
+.containertree {
+text-align: center;
+background-color: #23631f;
+position: center;
+display: flex;
+width: 100%;
+height: 198px;
+margin-top: 0px;
+}
+
+.image {
+margin-top: 30px;
+position: center;
+width: 25%;
+height: 15%;
+padding: 5%;
+}
+
+
+/*estilo del boton del catalogo*/
+
+.section10 {
+text-align: right;
+font-family: 'Futura Md BT';
+font-size: medium;
+color: white;
+padding: 100px;
+width: 100%;
+text-decoration: none;
+}
+
+.sectionten {
+text-align: center;
+font-family: 'Futura Md BT';
+font-size: medium;
+color: black;
+padding: 20px;
+border-radius: 40px;
+width: 100%;
+text-decoration: none;
+}
+
+.section10 > p {
+text-align: right;
+font-family: 'Futura Md BT';
+font-size: large;
+color: white;
+padding: 0px;
+border-radius: 40px;
+width: 100%;
+}
+
+.section10 a {
+text-decoration: none; /* Apply this to the <a> element */
+color: white; /* Make sure the link color is white */
+}
+
+/* Estilos  de los iconos de redes*/
+.ico3 {
+position: relative;
+width: 5%;
+/* Add a default color or style for the icon */
+fill: #666; /* default color */
+transition: fill 0.9s ease; /* Smooth transition */
+}
+
+.ico3:hover {
+/* Change the color to black on hover */
+filter: invert(1);
+}
+
+#myButton {
+background-color: white; /* Default color */
+color: black;
+padding: 20px 20px; /* Increased padding to make room for the arrow */
+border: none;
+cursor: pointer;
+position: relative; /* Add this to make the arrow position correctly */
+border-radius: 20px;
+font-family: 'Futura Md BT';
+font-size: medium;
+}
+
+#myButton:hover {
+background-color: black; /* Hover color */
+transition: background-color 0.9s ease; /* Smooth transition */
+color: white;
+}
+
+@keyframes slideIn {
+0% {
+right: 100%; /* Start from the right side of the button */
+opacity: 0; /* Make the arrow invisible initially */
+}
+
+100% {
+right: 30px; /* End up in the final position */
+opacity: 1; /* Make the arrow visible */
+}
+}

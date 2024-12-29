@@ -1,0 +1,892 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios | SOHE</title>
+    <link rel="stylesheet" href="estilosservicios.css">
+    <link rel="stylesheet" href="telefonosservicios.css">
+    <link rel="icon" href="../FAVICON\logo sohe.png" type="image/png">
+</head>
+<body>
+    <nav>
+        <a href="servicios.html">
+            <img src="../IMAGENES\logo.png" alt="Logo de SOHE" class="logo">
+        </a>
+        <input type="checkbox" id="menu-toggle" style="display: none;">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul class="menu">
+            <li>
+                <a href="index.html">Inicio</a>
+            </li>
+            <li>
+                <a href="#">Servicios que Ofrecemos <span class="arrow-down"></span></a>
+                <ul class="dropdown">
+                    <li><a href="#Sublimacion">Sublimación</a></li>
+                    <li><a href="#Bordado">Bordado</a></li>
+                    <li><a href="#Serigrafia">Serigrafia</a></li>
+                    <li><a href="#FullPrint">Full Print</a></li>
+                    <li><a href="#CorteGrabadoLaser">Corte & Grabado Laser</a></li>
+                    <li><a href="#FullColor">Full Color</a></li>
+                    <li><a href="#Papeleria">Papelería</a></li>
+                </ul>
+            </li>
+        </ul>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const menuToggle = document.getElementById('menu-toggle');
+                const menu = document.querySelector('.menu');
+
+                document.addEventListener('click', function (event) {
+                    if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+                        menuToggle.checked = false;
+                    }
+                });
+            });
+
+        </script>
+    </nav>
+    <div class="containerprese">
+        <h1 class="text">
+            Trabajamos para Darte lo Mejor en <br />
+            ARTICULOS PROMOCIONALES
+        </h1>
+    </div>
+    <div class="principios" id="Sublimacion">
+        <br />
+        <br />
+        <br />
+        <h2><span class="tooltip-trigger">SUBLIMACIÓN</span></h2>
+        <div class="tooltip-content">
+            <span class="close-tooltip">×</span>
+            <h2>SUBLIMACIÓN</h2>
+            <p>Técnica de impresión que permite imprimir imágenes de alta calidad y duraderas.</p>
+        </div>
+        <div class="overlay"></div>
+    </div>
+    <script>
+        // Agrega la clase "open" a la ventana cuando se abre
+        document.querySelector('#Sublimacion .tooltip-trigger').addEventListener('click', function () {
+            document.querySelector('#Sublimacion .tooltip-content').classList.add('open');
+            document.querySelector('#Sublimacion .overlay').classList.add('open');
+        });
+
+        // Quita la clase "open" cuando se cierra la ventana
+        document.querySelector('#Sublimacion .tooltip-content .close-tooltip').addEventListener('click', function () {
+            document.querySelector('#Sublimacion .tooltip-content').classList.remove('open');
+            document.querySelector('#Sublimacion .overlay').classList.remove('open');
+        });
+
+        // Quita la clase "open" cuando se presiona cualquier parte de la pantalla
+        document.addEventListener('click', function (event) {
+            if (!event.target.closest('#Sublimacion .tooltip-content') && !event.target.classList.contains('tooltip-trigger')) {
+                document.querySelector('#Sublimacion .tooltip-content').classList.remove('open');
+                document.querySelector('#Sublimacion .overlay').classList.remove('open');
+            }
+        });
+    </script>
+    <script>
+        const tooltipTrigger = document.querySelector('.tooltip-trigger');
+        const tooltipContent = document.querySelector('.tooltip-content');
+        const closeTooltip = document.querySelector('.close-tooltip');
+
+        tooltipTrigger.addEventListener('click', () => {
+            tooltipContent.style.display = 'block';
+        });
+
+        closeTooltip.addEventListener('click', () => {
+            tooltipContent.style.display = 'none';
+        });
+    </script>
+    <center>
+        <div class="container2">
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES\SUBLIMACION\MONOGRAMAS.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>Monogramas</h2>
+                    <br />
+                    <br />
+                </div>
+            </div>
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES\SUBLIMACION\DTF.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>Camisetas en DTF</h2>
+                    <br />
+                    <br />
+                </div>
+            </div>
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES\SUBLIMACION\Bolso taquero.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>Bolso Taquero Full Color</h2>
+                    <br />
+                    <br />
+                </div>
+            </div>
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES/SUBLIMACION\TAZAS.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>Tazas Full Color</h2>
+                    <br />
+                    <br />
+                </div>
+            </div>
+        </div>
+    </center>
+    <center>
+        <center>
+            <div class="principios" id="Bordado">
+                <br />
+                <br />
+                <br />
+                <h2><span class="tooltip-trigger">BORDADO</span></h2>
+                <div class="tooltip-content">
+                    <span class="close-tooltip">×</span>
+                    <h2>BORDADO</h2>
+                    <p>El proceso de bordado implica pasar el hilo a través de la tela, utilizando la aguja, para crear los puntos que forman el diseño deseado.</p>
+                </div>
+                <div class="overlay"></div>
+            </div>
+            <script>
+                // Bordado
+                document.querySelector('#Bordado .tooltip-trigger').addEventListener('click', function () {
+                    document.querySelector('#Bordado .tooltip-content').classList.add('open');
+                    document.querySelector('#Bordado .overlay').classList.add('open');
+                });
+
+                document.addEventListener('click', function (event) {
+                    if (!event.target.closest('#Bordado .tooltip-content') && !event.target.classList.contains('tooltip-trigger')) {
+                        document.querySelector('#Bordado .tooltip-content').classList.remove('open');
+                        document.querySelector('#Bordado .overlay').classList.remove('open');
+                    }
+                });
+
+                // Agregamos un listener para el botón de cierre (X)
+                document.querySelector('#Bordado .close-tooltip').addEventListener('click', function () {
+                    document.querySelector('#Bordado .tooltip-content').classList.remove('open');
+                    document.querySelector('#Bordado .overlay').classList.remove('open');
+                });
+            </script>
+            <script>
+                const tooltipTriggers = document.querySelectorAll('.tooltip-trigger');
+                const tooltipContents = document.querySelectorAll('.tooltip-content');
+                const closeTooltips = document.querySelectorAll('.close-tooltip');
+
+                tooltipTriggers.forEach((trigger, index) => {
+                    trigger.addEventListener('click', () => {
+                        tooltipContents[index].style.display = 'block';
+                    });
+                });
+
+                closeTooltips.forEach((close, index) => {
+                    close.addEventListener('click', () => {
+                        tooltipContents[index].style.display = 'none';
+                    });
+                });
+
+                document.addEventListener('click', (e) => {
+                    tooltipContents.forEach((content, index) => {
+                        if (!content.contains(e.target) && !tooltipTriggers[index].contains(e.target) && !closeTooltips[index].contains(e.target)) {
+                            content.style.display = 'none';
+                        }
+                    });
+                });
+            </script>
+        </center>
+        <div class="container2">
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES\BORDADO\MONOGRAMAS.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>Monogramas o Parches</h2>
+                    <br />
+                    <br />
+                </div>
+            </div>
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES\BORDADO\GORRAS.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>Gorras Bordadas</h2>
+                    <br />
+                    <br />
+                </div>
+            </div>
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES\BORDADO\TIPICAS.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>Camisas Tipicas</h2>
+                    <br />
+                    <br />
+                </div>
+            </div>
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES\BORDADO\FORMALES.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>Camisas Formales</h2>
+                    <br />
+                    <br />
+                </div>
+            </div>
+        </div>
+    </center>
+    <center>
+        <center>
+            <div class="principios" id="Serigrafia">
+                <br />
+                <br />
+                <br />
+                <h2><span class="tooltip-trigger">SERIGRAFÍA</span></h2>
+                <div class="tooltip-content">
+                    <span class="close-tooltip">×</span>
+                    <h2>SERIGRAFÍA</h2>
+                    <p>Es un proceso de impresión que utiliza una malla y tinta para transferir imágenes y textos a una superficie, como telas, papel, etc.</p>
+                </div>
+                <div class="overlay"></div>
+            </div>
+            <script>
+                // Serigrafía
+                document.querySelector('#Serigrafia .tooltip-trigger').addEventListener('click', function () {
+                    document.querySelector('#Serigrafia .tooltip-content').classList.add('open');
+                    document.querySelector('#Serigrafia .overlay').classList.add('open');
+                });
+
+                document.addEventListener('click', function (event) {
+                    if (!event.target.closest('#Serigrafia .tooltip-content') && !event.target.classList.contains('tooltip-trigger')) {
+                        document.querySelector('#Serigrafia .tooltip-content').classList.remove('open');
+                        document.querySelector('#Serigrafia .overlay').classList.remove('open');
+                    }
+                });
+
+                // Agregamos un listener para el botón de cierre (X)
+                document.querySelector('#Serigrafia .close-tooltip').addEventListener('click', function () {
+                    document.querySelector('#Serigrafia .tooltip-content').classList.remove('open');
+                    document.querySelector('#Serigrafia .overlay').classList.remove('open');
+                });
+            </script>
+            <script>
+                const serigrafiaTooltipTriggers = document.querySelectorAll('#Serigrafia .tooltip-trigger');
+                const serigrafiaTooltipContents = document.querySelectorAll('#Serigrafia .tooltip-content');
+                const serigrafiaCloseTooltips = document.querySelectorAll('#Serigrafia .close-tooltip');
+
+                serigrafiaTooltipTriggers.forEach((trigger, index) => {
+                    trigger.addEventListener('click', () => {
+                        serigrafiaTooltipContents[index].style.display = 'block';
+                    });
+                });
+
+                serigrafiaCloseTooltips.forEach((close, index) => {
+                    close.addEventListener('click', () => {
+                        serigrafiaTooltipContents[index].style.display = 'none';
+                    });
+                });
+
+                document.addEventListener('click', (e) => {
+                    serigrafiaTooltipContents.forEach((content, index) => {
+                        if (!content.contains(e.target) && !serigrafiaTooltipTriggers[index].contains(e.target) && !serigrafiaCloseTooltips[index].contains(e.target)) {
+                            content.style.display = 'none';
+                        }
+                    });
+                });
+            </script>
+        </center>
+        <div class="container2">
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES\SERIGRAFIA\CAMISETAS BASICAS.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>Camisetas Básicas</h2>
+                    <br />
+                    <br />
+                </div>
+            </div>
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES\SERIGRAFIA\Bolsos.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>Bolso Taquero en Serigrafia</h2>
+                    <br />
+                    <br />
+                </div>
+            </div>
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES\SERIGRAFIA\bolso ecologico.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>Bolsos Ecologicos</h2>
+                    <br />
+                    <br />
+                </div>
+            </div>
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES\SERIGRAFIA\libretas.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>Libretas Personales</h2>
+                    <br />
+                    <br />
+                </div>
+            </div>
+        </div>
+    </center>
+    <center>
+        <div class="principios" id="FullPrint">
+            <br />
+            <br />
+            <br />
+            <h2><span class="tooltip-trigger">FULL PRINT</span></h2>
+            <div class="tooltip-content">
+                <span class="close-tooltip">×</span>
+                <h2>FULL PRINT</h2>
+                <p>Proceso de impresión Full Print cubre toda la superficie de una prenda de vestir o objeto con una imagen o diseño, sin límites de tamaño o forma.</p>
+            </div>
+            <div class="overlay"></div>
+        </div>
+        <script>
+            // Agrega la clase "open" a la ventana cuando se abre
+            document.querySelector('#FullPrint .tooltip-trigger').addEventListener('click', function () {
+                document.querySelector('#FullPrint .tooltip-content').classList.add('open');
+                document.querySelector('#FullPrint .overlay').classList.add('open');
+            });
+
+            // Quita la clase "open" cuando se cierra la ventana
+            document.querySelector('#FullPrint .tooltip-content .close-tooltip').addEventListener('click', function () {
+                document.querySelector('#FullPrint .tooltip-content').classList.remove('open');
+                document.querySelector('#FullPrint .overlay').classList.remove('open');
+            });
+
+            // Quita la clase "open" cuando se presiona cualquier parte de la pantalla
+            document.addEventListener('click', function (event) {
+                if (!event.target.closest('#FullPrint .tooltip-content') && !event.target.classList.contains('tooltip-trigger')) {
+                    document.querySelector('#FullPrint .tooltip-content').classList.remove('open');
+                    document.querySelector('#FullPrint .overlay').classList.remove('open');
+                }
+            });
+        </script>
+        <script>
+            const fullPrintTooltipTriggers = document.querySelectorAll('#FullPrint .tooltip-trigger');
+            const fullPrintTooltipContents = document.querySelectorAll('#FullPrint .tooltip-content');
+            const fullPrintCloseTooltips = document.querySelectorAll('#FullPrint .close-tooltip');
+
+            fullPrintTooltipTriggers.forEach((trigger, index) => {
+                trigger.addEventListener('click', () => {
+                    fullPrintTooltipContents[index].style.display = 'block';
+                });
+            });
+
+            fullPrintCloseTooltips.forEach((close, index) => {
+                close.addEventListener('click', () => {
+                    fullPrintTooltipContents[index].style.display = 'none';
+                });
+            });
+
+            document.addEventListener('click', (e) => {
+                fullPrintTooltipContents.forEach((content, index) => {
+                    if (!content.contains(e.target) && !fullPrintTooltipTriggers[index].contains(e.target) && !fullPrintCloseTooltips[index].contains(e.target)) {
+                        content.style.display = 'none';
+                    }
+                });
+            });
+        </script>
+        <div class="container2">
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES\FULL PRINT CAMISETAS\camisas tipo polo.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>Camisa Tipo Polo</h2>
+                    <br />
+                    <br />
+                </div>
+            </div>
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES\FULL PRINT CAMISETAS\camulaje.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>Camiseta de Camuflaje</h2>
+                    <br />
+                    <br />
+                </div>
+            </div>
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES\FULL PRINT CAMISETAS\manga larga.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>Camisetas Manga Larga</h2>
+                    <br />
+                    <br />
+                </div>
+            </div>
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES\FULL PRINT CAMISETAS\uniforme.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>Uniformes</h2>
+                    <br />
+                    <br />
+                </div>
+            </div>
+        </div>
+    </center>
+    <center>
+        <div class="principios" id="CorteGrabadoLaser">
+            <br />
+            <br />
+            <br />
+            <h2><span class="tooltip-trigger">CORTE & GRABADO LÁSER</span></h2>
+            <div class="tooltip-content">
+                <span class="close-tooltip">×</span>
+                <h2>CORTE & GRABADO LÁSER</h2>
+                <p>Proceso que utiliza un láser para cortar o grabar materiales como madera, plástico, metal, etc. con alta precisión y detalle.</p>
+            </div>
+            <div class="overlay"></div>
+        </div>
+        <script>
+            // Agrega la clase "open" a la ventana cuando se abre
+            document.querySelector('#CorteGrabadoLaser .tooltip-trigger').addEventListener('click', function () {
+                document.querySelector('#CorteGrabadoLaser .tooltip-content').classList.add('open');
+                document.querySelector('#CorteGrabadoLaser .overlay').classList.add('open');
+            });
+
+            // Quita la clase "open" cuando se cierra la ventana
+            document.querySelector('#CorteGrabadoLaser .tooltip-content .close-tooltip').addEventListener('click', function () {
+                document.querySelector('#CorteGrabadoLaser .tooltip-content').classList.remove('open');
+                document.querySelector('#CorteGrabadoLaser .overlay').classList.remove('open');
+            });
+
+            // Quita la clase "open" cuando se presiona cualquier parte de la pantalla
+            document.addEventListener('click', function (event) {
+                if (!event.target.closest('#CorteGrabadoLaser .tooltip-content') && !event.target.classList.contains('tooltip-trigger')) {
+                    document.querySelector('#CorteGrabadoLaser .tooltip-content').classList.remove('open');
+                    document.querySelector('#CorteGrabadoLaser .overlay').classList.remove('open');
+                }
+            });
+        </script>
+        <script>
+            const corteGrabadoLaserTooltipTriggers = document.querySelectorAll('#CorteGrabadoLaser .tooltip-trigger');
+            const corteGrabadoLaserTooltipContents = document.querySelectorAll('#CorteGrabadoLaser .tooltip-content');
+            const corteGrabadoLaserCloseTooltips = document.querySelectorAll('#CorteGrabadoLaser .close-tooltip');
+
+            corteGrabadoLaserTooltipTriggers.forEach((trigger, index) => {
+                trigger.addEventListener('click', () => {
+                    corteGrabadoLaserTooltipContents[index].style.display = 'block';
+                });
+            });
+
+            corteGrabadoLaserCloseTooltips.forEach((close, index) => {
+                close.addEventListener('click', () => {
+                    corteGrabadoLaserTooltipContents[index].style.display = 'none';
+                });
+            });
+
+            document.addEventListener('click', (e) => {
+                corteGrabadoLaserTooltipContents.forEach((content, index) => {
+                    if (!content.contains(e.target) && !corteGrabadoLaserTooltipTriggers[index].contains(e.target) && !corteGrabadoLaserCloseTooltips[index].contains(e.target)) {
+                        content.style.display = 'none';
+                    }
+                });
+            });
+        </script>
+        <div class="container2">
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES\CORTE & GRABADO LASER\AGENDAS GRABADO LASER.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>Agendas</h2>
+                    <br />
+                    <br />
+                </div>
+            </div>
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES\CORTE & GRABADO LASER\LLAVERO METALICO.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>Llaveros Metalicos</h2>
+                    <br />
+                </div>
+            </div>
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES\CORTE & GRABADO LASER\LLAVEROS MADERA MDF.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>Llaveros Madera MDF</h2>
+                    <br />
+                    <br />
+                </div>
+            </div>
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES\CORTE & GRABADO LASER\PARCHES PARA GORRAS.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>Parches Para Gorras</h2>
+                    <br />
+                    <br />
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="container2">
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES\CORTE & GRABADO LASER\BOLIGRAFOS.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>Boligrafos</h2>
+                    <br />
+                    <br />
+                </div>
+            </div>
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES\CORTE & GRABADO LASER\VASO.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>Vaso Termico</h2>
+                    <br />
+                    <br />
+                </div>
+            </div>
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES\CORTE & GRABADO LASER\VASOS TIPO YETI.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>Vaso Tipo Yeti</h2>
+                    <br />
+                    <br />
+                </div>
+            </div>
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES\CORTE & GRABADO LASER\VINERAS.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>Vinera</h2>
+                    <br />
+                    <br />
+                </div>
+            </div>
+        </div>
+    </center>
+    <center>
+        <div class="principios" id="FullColor">
+            <br />
+            <br />
+            <br />
+            <h2><span class="tooltip-trigger">FULL COLOR</span></h2>
+            <div class="tooltip-content">
+                <span class="close-tooltip">×</span>
+                <h2>FULL COLOR</h2>
+                <p>Impresión que permite reproducir imágenes con una amplia gama de colores, incluyendo fotos y gráficos, con una alta calidad y fidelidad de color.</p>
+            </div>
+            <div class="overlay"></div>
+        </div>
+        <script>
+            // Agrega la clase "open" a la ventana cuando se abre
+            document.querySelector('#FullColor .tooltip-trigger').addEventListener('click', function () {
+                document.querySelector('#FullColor .tooltip-content').classList.add('open');
+                document.querySelector('#FullColor .overlay').classList.add('open');
+            });
+
+            // Quita la clase "open" cuando se cierra la ventana
+            document.querySelector('#FullColor .tooltip-content .close-tooltip').addEventListener('click', function () {
+                document.querySelector('#FullColor .tooltip-content').classList.remove('open');
+                document.querySelector('#FullColor .overlay').classList.remove('open');
+            });
+
+            // Quita la clase "open" cuando se presiona cualquier parte de la pantalla
+            document.addEventListener('click', function (event) {
+                if (!event.target.closest('#FullColor .tooltip-content') && !event.target.classList.contains('tooltip-trigger')) {
+                    document.querySelector('#FullColor .tooltip-content').classList.remove('open');
+                    document.querySelector('#FullColor .overlay').classList.remove('open');
+                }
+            });
+        </script>
+        <script>
+            const fullColorTooltipTriggers = document.querySelectorAll('#FullColor .tooltip-trigger');
+            const fullColorTooltipContents = document.querySelectorAll('#FullColor .tooltip-content');
+            const fullColorCloseTooltips = document.querySelectorAll('#FullColor .close-tooltip');
+
+            fullColorTooltipTriggers.forEach((trigger, index) => {
+                trigger.addEventListener('click', () => {
+                    fullColorTooltipContents[index].style.display = 'block';
+                });
+            });
+
+            fullColorCloseTooltips.forEach((close, index) => {
+                close.addEventListener('click', () => {
+                    fullColorTooltipContents[index].style.display = 'none';
+                });
+            });
+
+            document.addEventListener('click', (e) => {
+                fullColorTooltipContents.forEach((content, index) => {
+                    if (!content.contains(e.target) && !fullColorTooltipTriggers[index].contains(e.target) && !fullColorCloseTooltips[index].contains(e.target)) {
+                        content.style.display = 'none';
+                    }
+                });
+            });
+        </script>
+        <div class="container2">
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES\FULL COLOR\AGENDAS FULL COLOR.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>Agendas Personalizadas</h2>
+                    <br />
+                    <br />
+                </div>
+            </div>
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES\FULL COLOR\LLAVEROS ACRILICOS.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>LLaveros Acrilicos</h2>
+                    <br />
+                </div>
+            </div>
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES\FULL COLOR\BOTE SENCILLO.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>Botes Sencillos</h2>
+                    <br />
+                    <br />
+                </div>
+            </div>
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES\FULL COLOR/CAL VARILLA FULL COLOR.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>Cal. Varilla Full Color</h2>
+                    <br />
+                    <br />
+                </div>
+            </div>
+        </div>
+    </center>
+    <center>
+        <div class="principios" id="Papeleria">
+            <br />
+            <br />
+            <br />
+            <h2><span class="tooltip-trigger">PAPELERÍA</span></h2>
+            <div class="tooltip-content">
+                <span class="close-tooltip">×</span>
+                <h2>PAPELERÍA</h2>
+                <p>Impresión en papel se refiere al proceso de transferir texto e imágenes a un papel o cartulina utilizando tinta o otros materiales, creando una copia física de la información o diseño.</p>
+            </div>
+            <div class="overlay"></div>
+        </div>
+        <script>
+            // Agrega la clase "open" a la ventana cuando se abre
+            document.querySelector('#Papeleria .tooltip-trigger').addEventListener('click', function () {
+                document.querySelector('#Papeleria .tooltip-content').classList.add('open');
+                document.querySelector('#Papeleria .overlay').classList.add('open');
+            });
+
+            // Quita la clase "open" cuando se cierra la ventana
+            document.querySelector('#Papeleria .tooltip-content .close-tooltip').addEventListener('click', function () {
+                document.querySelector('#Papeleria .tooltip-content').classList.remove('open');
+                document.querySelector('#Papeleria .overlay').classList.remove('open');
+            });
+
+            // Quita la clase "open" cuando se presiona cualquier parte de la pantalla
+            document.addEventListener('click', function (event) {
+                if (!event.target.closest('#Papeleria .tooltip-content') && !event.target.classList.contains('tooltip-trigger')) {
+                    document.querySelector('#Papeleria .tooltip-content').classList.remove('open');
+                    document.querySelector('#Papeleria .overlay').classList.remove('open');
+                }
+            });
+        </script>
+        <script>
+            const papeleriaTooltipTriggers = document.querySelectorAll('#Papeleria .tooltip-trigger');
+            const papeleriaTooltipContents = document.querySelectorAll('#Papeleria .tooltip-content');
+            const papeleriaCloseTooltips = document.querySelectorAll('#Papeleria .close-tooltip');
+
+            papeleriaTooltipTriggers.forEach((trigger, index) => {
+                trigger.addEventListener('click', () => {
+                    papeleriaTooltipContents[index].style.display = 'block';
+                });
+            });
+
+            papeleriaCloseTooltips.forEach((close, index) => {
+                close.addEventListener('click', () => {
+                    papeleriaTooltipContents[index].style.display = 'none';
+                });
+            });
+
+            document.addEventListener('click', (e) => {
+                papeleriaTooltipContents.forEach((content, index) => {
+                    if (!content.contains(e.target) && !papeleriaTooltipTriggers[index].contains(e.target) && !papeleriaCloseTooltips[index].contains(e.target)) {
+                        content.style.display = 'none';
+                    }
+                });
+            });
+        </script>
+        <div class="container2">
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES\PAPELERIA\SOBRES.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>Sobres</h2>
+                    <br />
+                    <br />
+                </div>
+            </div>
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES\PAPELERIA\TARJETAS DE PRESENTACION.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>Tarjetas de Presentación</h2>
+                    <br />
+                    <br />
+                </div>
+            </div>
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES\PAPELERIA/CAL VARILLA 1 COLOR.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>Cal. Varilla 1 Color</h2>
+                    <br />
+                    <br />
+                </div>
+            </div>
+            <div class="card">
+                <div class="section5">
+                    <img src="../IMAGENES\PAPELERIA/CAL ESCRITORIO.png" alt="camisas" class="image5">
+                    <br />
+                    <br />
+                    <br />
+                    <h2>Cal. Escritorio Full Color</h2>
+                    <br />
+                    <br />
+                </div>
+            </div>
+        </div>
+    </center>
+    <center>
+        <div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+        <div class="container3 animate">
+            <div class="section10">
+                <p>
+                    ©2024 <strong>Imprenta Sohe</strong>, Todos los derechos reservados
+                </p>
+            </div>
+        </div>
+    </center>
+    <script>
+        const anchorLinks = document.querySelectorAll('a[href*="#"]');
+
+        anchorLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const hash = link.getAttribute('href');
+                const targetElement = document.querySelector(hash);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+    <script>
+        let lastScrollTop = 0;
+        let animateElements = document.querySelectorAll('.animate');
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                animateElements.forEach((element) => {
+                    if (isInViewport(element)) {
+                        element.classList.add('active');
+                    }
+                });
+            }
+            lastScrollTop = scrollTop;
+        });
+
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top <= window.innerHeight &&
+                rect.bottom >= 0
+            );
+        }
+    </script>
+</body>
+</html>
